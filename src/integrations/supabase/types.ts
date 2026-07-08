@@ -56,12 +56,42 @@ export type Database = {
         }
         Relationships: []
       }
+      short_links: {
+        Row: {
+          click_count: number
+          created_at: string
+          id: string
+          slug: string
+          target_url: string
+          user_id: string | null
+        }
+        Insert: {
+          click_count?: number
+          created_at?: string
+          id?: string
+          slug: string
+          target_url: string
+          user_id?: string | null
+        }
+        Update: {
+          click_count?: number
+          created_at?: string
+          id?: string
+          slug?: string
+          target_url?: string
+          user_id?: string | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      increment_short_link_click: {
+        Args: { _slug: string }
+        Returns: undefined
+      }
     }
     Enums: {
       [_ in never]: never
