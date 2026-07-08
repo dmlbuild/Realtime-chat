@@ -33,6 +33,12 @@ function Index() {
               Enter chat
             </Button>
           </Link>
+          <Link to="/dashboard">
+            <Button size="lg" variant="outline">
+              <BarChart3 className="mr-2 h-4 w-4" />
+              View dashboard
+            </Button>
+          </Link>
         </div>
 
         <div className="mt-16 grid w-full gap-6 sm:grid-cols-3">
