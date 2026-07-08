@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
-import { MessageCircle, Zap, Users, Lock, BarChart3 } from "lucide-react";
+import { MessageCircle, Zap, Users, Lock, BarChart3, Link2 } from "lucide-react";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -37,6 +37,12 @@ function Index() {
             <Button size="lg" variant="outline">
               <BarChart3 className="mr-2 h-4 w-4" />
               View dashboard
+            </Button>
+          </Link>
+          <Link to="/shortener">
+            <Button size="lg" variant="outline">
+              <Link2 className="mr-2 h-4 w-4" />
+              URL shortener
             </Button>
           </Link>
         </div>
